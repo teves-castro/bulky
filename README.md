@@ -64,7 +64,7 @@ CREATE TABLE [dbo].[User]
 
 ### How do I use this with [copper](http://github.com/danielcrenna/copper)?
 
-Bulky includes a `BulkCopyConsumer` (in source, not in the distroo) that will batch events handled by it and 
+Bulky includes a `BulkCopyConsumer` (in source, not in the distro) that will batch events handled by it and 
 bulk insert them to the underlying database. By default, it uses [tophat](http://github.com/danielcrenna/tophat) for connection scoping
 (but you can provide your own `ConnectionBuilder` function), and [TableDescriptor](http://github.com/danielcrenna/TableDescriptor) for object mapping
 (but you can provide your own `Descriptor` for custom mapping).
