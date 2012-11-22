@@ -1,7 +1,7 @@
 bulky
 =====
 Bulky is an idiomatic bulk insert interface for databases. It gives you the ability to use the
-native bulk copy mechanism of your database (currently SQL Server, MySQL, or SQLite) simply using
+native bulk copy mechanism of your database (currently SQL Server, MySQL, or SQLite) simply, using
 plain C# objects and an extension method on `IDbConnection`, much like how [Dapper](https://github.com/SamSaffron/dapper-dot-net) functions.
 
 ### Why would I use this?
