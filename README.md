@@ -15,7 +15,7 @@ plain C# objects and an extension method on `IDbConnection`, much like how [Dapp
 The hands-free usage is simple:
 
 ```csharp
-using Bulky;
+using bulky;
 
 IEnumerable<User> users = ReallyLargeCollectionOfUsers();
 var connection = GetMyDatabaseConnectionFromSomewhere();
@@ -26,7 +26,7 @@ Behind the scenes, Bulky is using the provided bulk copy implementation.
 This is how you can change the underlying strategy:
 
 ```csharp
-using Bulky;
+using bulky;
 
 // Change to MySQL multi-value inserts
 Bulky.BulkCopier = new MySqlBulkCopy();
