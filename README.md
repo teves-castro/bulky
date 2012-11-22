@@ -16,7 +16,7 @@ native bulk copy mechanism of your database simply, using plain C# objects and a
 
 
 ### Usage
---------
+
 The hands-free usage is simple:
 
 ```csharp
