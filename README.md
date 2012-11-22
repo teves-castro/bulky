@@ -17,7 +17,6 @@ The hands-free usage is simple:
 ```csharp
 using bulky;
 
-
 // Get your objects from somewhere
 IEnumerable<User> users = ReallyLargeCollectionOfUsers();
 
