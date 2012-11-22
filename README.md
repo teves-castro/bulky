@@ -17,8 +17,14 @@ The hands-free usage is simple:
 ```csharp
 using bulky;
 
+
+// Get your objects from somewhere
 IEnumerable<User> users = ReallyLargeCollectionOfUsers();
+
+// Get your connection from somewhere else
 var connection = GetMyDatabaseConnectionFromSomewhere();
+
+// Profit!
 connection.BulkCopy(users);
 ```
 
