@@ -1,5 +1,10 @@
 bulky
 =====
+
+```powershell
+PM> Install-Package bulky
+```
+
 Bulky is an idiomatic bulk insert interface for databases. It gives you the ability to use the
 native bulk copy mechanism of your database simply, using plain C# objects and an extension method on `IDbConnection`, much like how [Dapper](https://github.com/SamSaffron/dapper-dot-net) functions.
 
