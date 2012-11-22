@@ -6,6 +6,7 @@ plain C# objects and an extension method on `IDbConnection`, much like how [Dapp
 
 ### Why would I use this?
 - You want simple, high speed bulk inserts of large collections of objects
+- You need support for multiple databases (SQL Server, MySQL, and SQLite are supported today)
 - You use [copper](http://github.com/danielcrenna/copper), and you want to hook up a `BulkCopyConsumer` for high performance, periodic batching inserts 
 - It works great with [tophat](http://github.com/danielcrenna/tophat)
 
