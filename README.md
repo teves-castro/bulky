@@ -21,7 +21,7 @@ using bulky;
 IEnumerable<User> users = ReallyLargeCollectionOfUsers();
 
 // Get your connection from somewhere else
-var connection = GetMyDatabaseConnectionFromSomewhere();
+IDbConnection connection = GetMyDatabaseConnectionFromSomewhere();
 
 // Profit!
 connection.BulkCopy(users);
