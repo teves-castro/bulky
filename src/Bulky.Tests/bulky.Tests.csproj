@@ -30,24 +30,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="container, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\container.dll</HintPath>
+    <Reference Include="container">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\container.dll</HintPath>
     </Reference>
     <Reference Include="copper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\copper.0.9.4-alpha\net40\copper.dll</HintPath>
     </Reference>
     <Reference Include="Dapper">
-      <HintPath>..\packages\Dapper.1.12.1\lib\net40\Dapper.dll</HintPath>
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="FluentMigrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\FluentMigrator.dll</HintPath>
+    <Reference Include="FluentMigrator">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\FluentMigrator.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="FluentMigrator.Runner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\FluentMigrator.Runner.dll</HintPath>
+    <Reference Include="FluentMigrator.Runner">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\FluentMigrator.Runner.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.6.5.4\lib\net40\MySql.Data.dll</HintPath>
@@ -70,7 +70,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="TableDescriptor">
-      <HintPath>..\packages\TableDescriptor.1.0.0\lib\net40\TableDescriptor.dll</HintPath>
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\TableDescriptor.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="tophat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -103,10 +104,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\tuxedo\src\tuxedo\tuxedo\tuxedo.csproj">
-      <Project>{3101D29E-5D73-4B43-AFE9-7E682C78959D}</Project>
-      <Name>tuxedo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\bulky.Copper\bulky.Copper.csproj">
       <Project>{B8A26190-F414-4BF6-943B-AA786411637C}</Project>
       <Name>bulky.Copper</Name>

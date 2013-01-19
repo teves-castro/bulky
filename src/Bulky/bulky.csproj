@@ -31,7 +31,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="container">
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\container.dll</HintPath>
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\container.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentMigrator">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\FluentMigrator.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentMigrator.Runner">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\FluentMigrator.Runner.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -40,12 +51,20 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TableDescriptor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\TableDescriptor.1.0.0\lib\net40\TableDescriptor.dll</HintPath>
+    <Reference Include="TableDescriptor">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\TableDescriptor.dll</HintPath>
     </Reference>
     <Reference Include="tophat">
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\tophat.dll</HintPath>
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\tophat.dll</HintPath>
+    </Reference>
+    <Reference Include="tophat.FluentMigrator">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\tophat.FluentMigrator.dll</HintPath>
+    </Reference>
+    <Reference Include="tuxedo">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\tuxedo.dll</HintPath>
+    </Reference>
+    <Reference Include="tuxedo.Dapper">
+      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\tuxedo.Dapper.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -65,12 +84,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\tuxedo\src\tuxedo\tuxedo\tuxedo.csproj">
-      <Project>{3101d29e-5d73-4b43-afe9-7e682c78959d}</Project>
-      <Name>tuxedo</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
