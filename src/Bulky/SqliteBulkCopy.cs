@@ -21,15 +21,19 @@ namespace bulky
 
         public void Copy<T>(Descriptor descriptor, IDbConnection connection, IEnumerable<T> entities, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            var settings = BeforeBulkInsert(connection, transaction, commandTimeout);
+            if (entities == null || !entities.Any())
+            {
+                return;
+            }
 
+            var settings = BeforeBulkInsert(connection, transaction, commandTimeout);
             try
             {
                 descriptor = descriptor ?? SimpleDescriptor.Create<T>();
                 var command = connection.CreateCommand();
                 transaction = transaction ?? connection.BeginTransaction();
 
-                SetCommandText<T>(command);
+                SetCommandText<T>(command, entities.First());
 
                 var properties = descriptor.Insertable.ToArray();
                 var parameterNames = properties.Select(p => p.ColumnName);
@@ -61,11 +65,11 @@ namespace bulky
             }
         }
 
-        private static void SetCommandText<T>(IDbCommand command)
+        private static void SetCommandText<T>(IDbCommand command, T example)
         {
             var dialect = Tuxedo.Dialect;
             Tuxedo.Dialect = Dialect;
-            command.CommandText = Tuxedo.Insert<T>().Sql;
+            command.CommandText = Tuxedo.Insert(example).Sql;
             Tuxedo.Dialect = dialect;
         }
 

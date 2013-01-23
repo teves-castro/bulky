@@ -31,16 +31,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="container">
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\container.dll</HintPath>
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\container.dll</HintPath>
     </Reference>
     <Reference Include="copper">
       <HintPath>..\..\..\copper\bin\net40\copper.dll</HintPath>
     </Reference>
     <Reference Include="FluentMigrator">
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\FluentMigrator.dll</HintPath>
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\FluentMigrator.dll</HintPath>
     </Reference>
     <Reference Include="FluentMigrator.Runner">
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\FluentMigrator.Runner.dll</HintPath>
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\FluentMigrator.Runner.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,10 +53,10 @@
       <HintPath>..\packages\TableDescriptor.1.0.0\lib\net40\TableDescriptor.dll</HintPath>
     </Reference>
     <Reference Include="tophat">
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\tophat.dll</HintPath>
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\tophat.dll</HintPath>
     </Reference>
     <Reference Include="tophat.FluentMigrator">
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\tophat.FluentMigrator.dll</HintPath>
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\tophat.FluentMigrator.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -31,26 +31,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="container">
-      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\container.dll</HintPath>
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\container.dll</HintPath>
     </Reference>
     <Reference Include="copper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\copper.0.9.4-alpha\net40\copper.dll</HintPath>
+      <HintPath>..\..\..\copper\bin\net40\copper.dll</HintPath>
     </Reference>
     <Reference Include="Dapper">
-      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\Dapper.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\tuxedo.1.0.0\lib\net40\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="FluentMigrator">
-      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\FluentMigrator.dll</HintPath>
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\FluentMigrator.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FluentMigrator.Runner">
-      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\FluentMigrator.Runner.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\FluentMigrator.Runner.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>..\packages\MySql.Data.6.5.4\lib\net40\MySql.Data.dll</HintPath>
+      <HintPath>..\packages\MySql.Data.6.6.4\lib\net40\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
@@ -59,10 +57,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite">
-      <HintPath>..\packages\System.Data.SQLite.1.0.82.0\lib\net40\System.Data.SQLite.dll</HintPath>
+      <HintPath>..\packages\System.Data.SQLite.1.0.84.0\lib\net40\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.SQLite.Linq">
-      <HintPath>..\packages\System.Data.SQLite.1.0.82.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+      <HintPath>..\packages\System.Data.SQLite.1.0.84.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,16 +68,21 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="TableDescriptor">
-      <HintPath>..\packages\tuxedo.0.9.0-alpha\lib\net40\TableDescriptor.dll</HintPath>
+      <HintPath>..\packages\tuxedo.1.0.0\lib\net40\TableDescriptor.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="tophat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\tophat.dll</HintPath>
+    <Reference Include="tophat">
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\tophat.dll</HintPath>
     </Reference>
-    <Reference Include="tophat.FluentMigrator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tophat.1.0.3\lib\net40\tophat.FluentMigrator.dll</HintPath>
+    <Reference Include="tophat.FluentMigrator">
+      <HintPath>..\packages\tophat.1.0.7\lib\net40\tophat.FluentMigrator.dll</HintPath>
+    </Reference>
+    <Reference Include="tuxedo">
+      <HintPath>..\packages\tuxedo.1.0.0\lib\net40\tuxedo.dll</HintPath>
+    </Reference>
+    <Reference Include="tuxedo.Dapper">
+      <HintPath>..\packages\tuxedo.1.0.0\lib\net40\tuxedo.Dapper.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -121,7 +124,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
