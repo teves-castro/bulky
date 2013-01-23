@@ -2,7 +2,7 @@
 <package>
     <metadata>
         <id>bulky</id>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <authors>Daniel Crenna</authors>
         <owners>Daniel Crenna</owners>
         <summary>An idiomatic bulk insert interface for databases</summary>
@@ -14,7 +14,6 @@
         <tags>bulk insert sqlserver sqlite mysql dapper</tags>
         <dependencies>
           <dependency id="TableDescriptor" version="1.0.0" />
-          <dependency id="tophat" version="1.0.3" />
           <dependency id="tuxedo" version="1.0.0" />
         </dependencies>
     </metadata>

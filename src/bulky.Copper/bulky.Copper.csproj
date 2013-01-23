@@ -49,9 +49,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TableDescriptor">
-      <HintPath>..\packages\TableDescriptor.1.0.0\lib\net40\TableDescriptor.dll</HintPath>
-    </Reference>
     <Reference Include="tophat">
       <HintPath>..\packages\tophat.1.0.7\lib\net40\tophat.dll</HintPath>
     </Reference>
