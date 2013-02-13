@@ -4,7 +4,6 @@ using System.Threading;
 using NUnit.Framework;
 using bulky.Tests.Sqlite;
 using tophat;
-using tophat.FluentMigrator;
 using tuxedo.Dialects;
 
 namespace bulky.Tests.Fixtures
@@ -79,8 +78,7 @@ namespace bulky.Tests.Fixtures
             var database = string.Format("{0}.db", Guid.NewGuid());
             var connectionString = string.Format("Data Source={0};Version=3;New=True;", database);
             Database.Install<SqliteConnectionFactory>(connectionString, ConnectionScope.ByThread);
-            Database.Container.Register<IMigrationService>(r => new MigrationService(DatabaseType.Sqlite));
-            Database.MigrateToLatest();
+            new MigrationService().MigrateToLatest("sqlite", connectionString);
         }
     }
 }

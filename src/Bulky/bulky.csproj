@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="Dapper, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tuxedo.1.0.0\lib\net40\Dapper.dll</HintPath>
+      <HintPath>..\packages\tuxedo.1.0.1\lib\net40\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,15 +43,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="TableDescriptor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tuxedo.1.0.0\lib\net40\TableDescriptor.dll</HintPath>
+      <HintPath>..\packages\tuxedo.1.0.1\lib\net40\TableDescriptor.dll</HintPath>
     </Reference>
     <Reference Include="tuxedo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tuxedo.1.0.0\lib\net40\tuxedo.dll</HintPath>
+      <HintPath>..\packages\tuxedo.1.0.1\lib\net40\tuxedo.dll</HintPath>
     </Reference>
     <Reference Include="tuxedo.Dapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\tuxedo.1.0.0\lib\net40\tuxedo.Dapper.dll</HintPath>
+      <HintPath>..\packages\tuxedo.1.0.1\lib\net40\tuxedo.Dapper.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

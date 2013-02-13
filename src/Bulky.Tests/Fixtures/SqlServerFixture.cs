@@ -2,7 +2,6 @@ using System;
 using Dapper;
 using NUnit.Framework;
 using tophat;
-using tophat.FluentMigrator;
 using tuxedo.Dialects;
 
 namespace bulky.Tests.Fixtures
@@ -39,8 +38,7 @@ namespace bulky.Tests.Fixtures
             var database = CreateDatabase();
             var connectionString = string.Format("Data Source=localhost;Initial Catalog={0};Integrated Security=true", database);
             Database.Install<SqlServerConnectionFactory>(connectionString, ConnectionScope.ByThread);
-            Database.Container.Register<IMigrationService>(r => new MigrationService(DatabaseType.SqlServer));
-            Database.MigrateToLatest();
+            new MigrationService().MigrateToLatest("sqlserver", connectionString);
             return database.ToString();
         }
 

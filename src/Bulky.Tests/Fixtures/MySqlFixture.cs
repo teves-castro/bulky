@@ -5,7 +5,6 @@ using Dapper;
 using NUnit.Framework;
 using bulky.Tests.MySql;
 using tophat;
-using tophat.FluentMigrator;
 using tuxedo.Dialects;
 
 namespace bulky.Tests.Fixtures
@@ -38,8 +37,7 @@ namespace bulky.Tests.Fixtures
             var database = CreateDatabase();
             var connectionString = string.Format("Server=localhost;Uid={0};Pwd={1};Database={2};", ConfigurationManager.AppSettings["MySQLUser"], ConfigurationManager.AppSettings["MySQLPassword"], database);
             Database.Install<MySqlConnectionFactory>(connectionString, ConnectionScope.ByThread);
-            Database.Container.Register<IMigrationService>(r => new MigrationService(DatabaseType.MySql));
-            Database.MigrateToLatest();
+            new MigrationService().MigrateToLatest("mysql", connectionString);
             UnitOfWork.Current.Query("SELECT COUNT(*) AS `C` FROM `User`").Single();
             Assert.AreEqual(UnitOfWork.Current.Database, database.ToString());
         }
