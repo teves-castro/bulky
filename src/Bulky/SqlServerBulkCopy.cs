@@ -13,7 +13,7 @@ namespace bulky
     /// - TABLOCK is set
     /// - The batch size is set to the number of rows inserted
     /// - The recovery model is set to bulk-logged
-    /// - Page verify is temporarily turned off it is on
+    /// - Page verify is temporarily turned off if it is on
     /// Assumptions (for best performance):
     /// - The target table is not being replicated
     /// - The target table does not have any triggers
@@ -95,16 +95,24 @@ namespace bulky
 
         public virtual IEnumerable<string> GetDatabaseTableColumns(IDbConnection connection, string tableName, int commandTimeout)
         {
-            using (var command = (SqlCommand) connection.CreateCommand())
+            using (var command = connection.CreateCommand())
             {
                 command.CommandText = "sp_Columns";
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandTimeout = commandTimeout;
-                command.Parameters.Add("@table_name", SqlDbType.NVarChar, 384).Value = tableName;
+
+                //command.Parameters.Add("@table_name", SqlDbType.NVarChar, 384).Value = tableName;
+                var parameter = command.CreateParameter();
+                parameter.ParameterName = "@table_name";
+                parameter.DbType = DbType.String;
+                parameter.Size = 384;
+                parameter.Value = tableName;
+                command.Parameters.Add(parameter);
+                
                 if (connection.State == ConnectionState.Closed) connection.Open();
                 using (var reader = command.ExecuteReader())
                 {
-                    while (reader.Read())
+                    while (reader != null && reader.Read())
                     {
                         yield return (string) reader["column_name"];
                     }
