@@ -13,7 +13,7 @@ namespace bulky
 
         public static void BulkCopy<T>(this IDbConnection connection, Descriptor descriptor, IEnumerable<T> entities, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            Bulky.BulkCopier.Copy(SimpleDescriptor.Create<T>(), connection, entities, transaction, commandTimeout);
+            Bulky.BulkCopier.Copy(descriptor, connection, entities, transaction, commandTimeout);
         }
     }
 }
