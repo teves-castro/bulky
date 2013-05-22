@@ -26,7 +26,7 @@ namespace bulky
         public virtual void Copy<T>(Descriptor descriptor, IDbConnection connection, IEnumerable<T> entities, IDbTransaction transaction = null, int? commandTimeout = null)
         {
             descriptor = descriptor ?? SimpleDescriptor.Create<T>();
-            var reader = new EnumerableDataReader<T>(entities);
+            var reader = new EnumerableDataReader<T>(entities, descriptor);
             var timeout = commandTimeout.HasValue ? commandTimeout.Value : 0;
             var mapping = GenerateBulkCopyMapping(descriptor, reader, connection, timeout);
             
