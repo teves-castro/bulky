@@ -27,15 +27,21 @@ namespace bulky
             get { return _enumerable.Count(); }
         }
 
-        public EnumerableDataReader(IEnumerable<T> entities) : this()
+        public EnumerableDataReader(IEnumerable<T> entities, Descriptor descriptor)
+            : this(descriptor)
         {
             _enumerable = new ConcurrentQueue<T>(entities);
             _enumerator = _enumerable.GetEnumerator();
         }
-        
-        public EnumerableDataReader() : this(SimpleDescriptor.Create<T>())
+
+        public EnumerableDataReader(IEnumerable<T> entities)
+            : this(entities, SimpleDescriptor.Create<T>())
         {
-            
+        }
+
+        public EnumerableDataReader()
+            : this(SimpleDescriptor.Create<T>())
+        {
         }
 
         public EnumerableDataReader(Descriptor descriptor)
@@ -44,7 +50,7 @@ namespace bulky
             _properties = descriptor.Insertable.ToArray();
             FieldCount = _properties.Length;
         }
-        
+
         public DataTable GetSchemaTable()
         {
             var table = new DataTable();
@@ -142,12 +148,12 @@ namespace bulky
 
         public virtual void Dispose(bool disposing)
         {
-            if(disposing)
+            if (disposing)
             {
                 Close();
             }
         }
-        
+
         #region Not Supported
         private static void NotUsedByBulkCopy()
         {
@@ -157,7 +163,7 @@ namespace bulky
         public int RecordsAffected
         {
             get
-            { 
+            {
                 NotUsedByBulkCopy();
                 return 0;
             }
@@ -212,7 +218,7 @@ namespace bulky
         {
             return _record[i];
         }
-        
+
         public string GetName(int i)
         {
             return _properties[i].ColumnName;
